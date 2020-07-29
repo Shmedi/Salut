@@ -1,0 +1,138 @@
+/*  === GLOBAL STYLES === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(33, 46, 54);
+  color: rgb(227, 232, 238);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+/* === TYPOGRAPHY === */
+h1,
+h2,
+p {
+  padding: 15px 0;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h3 {
+  font-weight: 300;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.4;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* === FORM STYLES === */
+
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.question {
+  border: 3px solid rgb(227, 232, 238);
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 20px auto;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.question h2 {
+  width: 100%;
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+label {
+  align-items: center;
+  background: rgba(227, 232, 238, 0.8);
+  /* border-radius: 5px; */
+  color: #222;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.15rem;
+  margin: 15px 0;
+  padding: 20px 10px;
+  position: relative;
+  text-align: center;
+  transition: 200ms background, color 200ms, transform 200ms;
+  width: 45%;
+}
+
+label:hover {
+  background: rgb(88, 161, 146);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* This style would have to be added with JS */
+.selected {
+  background: rgb(207, 99, 11);
+  color: rgb(227, 232, 238);
+}
+
+.selected:hover {
+  background: rgb(207, 99, 11);
+}
+
+.btnWrapper {
+  border: 3px solid rgb(227, 232, 238);
+  margin: 10px 0;
+  padding: 7px;
+  transition: 200ms;
+  width: 100%;
+}
+
+.btnWrapper:hover {
+  transform: scale(1.02);
+}
+
+.submit {
+  background: rgb(33, 46, 54);
+  border: 3px solid rgb(207, 99, 11);
+  color: rgb(227, 232, 238);
+  padding: 25px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background: rgb(88, 161, 146);
+  border-color: rgb(88, 161, 146);
+  color: #222;
+}

@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles/styles.css">
-  <title>projectFour</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts (Montserrat - Lizz's Mock Up) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="lizzMockUp.css" />
+    <title>salut.</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header>
+        <h1>salut.</h1>
+        <p>
+          Looking for your signature drink? Our bespoke bartending app helps you
+          find your perfect match. A well curated list of cocktails has been
+          carefully selected to help you cut through the noise and find the
+          cocktail recipe that's perfect for you.
+        </p>
+      </header>
 
-<div class="wrapper">
-  <!-- Header -->
-  <header>
-    <h1>salut.</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis qui nobis quibusdam mollitia eaque neque dolores corporis dicta. Exercitationem inventore tempora ea sequi facere culpa, similique eligendi est corporis laborum?</p>
-  </header>
+      <!-- Main -->
+      <main>
+        <!-- Form for questions -->
+        <form action="" autocomplete="off">
+          <h2>What are you in the mood for?</h2>
+          <!-- Container for question one -->
+          <div class="question q1" role="radiogroup">
+            <h3>Cocktail or Mocktail?</h3>
+            <label for="cocktail">
+              Cocktail
+              <input type="radio" id="cocktail" name="question1" />
+            </label>
 
-  <!-- Main -->
-  <main>
-    <!-- Form for questions -->
-    <form action="" autocomplete="off">
-      <!-- Container for question one -->
-      <div class="question q1" role="radiogroup">
-        <h2></h2>
-        <input type="radio" id="cocktail" name="question1">
-        <label for="cocktail">Cocktail</label>
+            <label for="mocktail">
+              Mocktail
+              <input type="radio" id="mocktail" name="question1" />
+            </label>
+          </div>
+          <!-- Container for question two -->
+          <div class="question q2" role="radiogroup">
+            <h3>Classic or Fancy?</h3>
 
-        <input type="radio" id="mocktail" name="question1">
-        <label for="mocktail">Mocktail</label>
-      </div>
-      <!-- Container for question two -->
-      <div class="question q2" role="radiogroup">
-        <h2></h2>
-        <input type="radio" id="classic" name="question2">
-        <label for="classic">Classic</label>
+            <!-- Lizz Mockup - Nested the inputs in the labels so that the invisble radios aren't taking up space in the layout -->
+            <label for="classic">
+              Classic
+              <input type="radio" id="classic" name="question2" />
+            </label>
 
-        <input type="radio" id="fancy" name="question2">
-        <label for="fancy">Fancy</label>
-      </div>
-    </form>
+            <label for="fancy" class="selected">
+              Fancy
+              <input type="radio" id="fancy" name="question2" />
+            </label>
+          </div>
+          <!-- Lizz MockUp -- Added Button to style "find results" -->
+          <div class="btnWrapper">
+            <button type="submit" class="submit">Pour me a drink</button>
+          </div>
+        </form>
 
-    <!-- Recipe card section -->
-    <section class="recipeCard">
-      <div class="imgWrapper">
-        <img src="" alt="">
-      </div>
-      <div class="copyWrapper">
-        <h2>Recipe</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora repellat reiciendis cumque tempore numquam labore? Pariatur eius accusamus deleniti corrupti!</p>
-      </div>
-    </section>
-  </main>
-</div>
+        <!-- Recipe card section -->
+        <section class="recipeCard">
+          <div class="imgWrapper">
+            <img src="" alt="" />
+          </div>
+          <div class="copyWrapper">
+            <h2>Recipe</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+              repellat reiciendis cumque tempore numquam labore? Pariatur eius
+              accusamus deleniti corrupti!
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
 
-<!-- jQuery and JavaScript -->
-<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-<script src="./assets/script.js"></script>
-</body>
+    <!-- jQuery and JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
