@@ -1,79 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500&display=swap"
-  rel="stylesheet" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/c53f7e277a.js" crossorigin="anonymous"></script>
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="shmedi.css">
-  <title>projectFour</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c53f7e277a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="shmedi.css" />
+    <title>projectFour</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrapper logoContainer flicker-in-1">
+        <i class="fas fa-cocktail"></i>
+        <h1>salut.</h1>
+      </div>
+      <i class="arrow fa fa-angle-double-down bounce-top"></i>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <div class="wrapper logoContainer flicker-in-1">
-      <i class="fas fa-cocktail"></i>
-      <h1>salut.</h1>
+    <!-- Main -->
+    <div class="wrapper">
+      <main>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis qui
+          nobis quibusdam mollitia eaque neque dolores corporis dicta.
+          Exercitationem inventore tempora ea sequi facere culpa, similique
+          eligendi est corporis?
+        </p>
+        <!-- Form for questions -->
+        <form action="" autocomplete="off">
+          <!-- Container for question one -->
+          <div class="question q1" role="radiogroup">
+            <h2>Beverage</h2>
+            <div class="op1">
+              <input
+                type="radio"
+                value="cocktail"
+                id="cocktail"
+                name="question1"
+              />
+              <label for="cocktail">Cocktail</label>
+            </div>
+
+            <div class="op2">
+              <input
+                type="radio"
+                value="mocktail"
+                id="mocktail"
+                name="question1"
+              />
+              <label for="mocktail">Mocktail</label>
+            </div>
+          </div>
+          <!-- Container for question two -->
+          <div class="question q2" role="radiogroup">
+            <h2>Style</h2>
+            <div class="op1">
+              <input
+                type="radio"
+                value="classic"
+                id="classic"
+                name="question2"
+              />
+              <label for="classic">Classic</label>
+            </div>
+
+            <div class="op2">
+              <input type="radio" value="fancy" id="fancy" name="question2" />
+              <label for="fancy">Fancy</label>
+            </div>
+          </div>
+
+          <button class="submit" type="submit">Pour me a drink</button>
+        </form>
+
+        <!-- Recipe card section -->
+        <section class="recipeCard">
+          <div class="imgWrapper">
+            <img src="" alt="" />
+          </div>
+          <div class="copyWrapper">
+            <h2 class="drinkName"></h2>
+            <ul>
+              <!-- Display items -->
+            </ul>
+          </div>
+        </section>
+      </main>
     </div>
-    <i class="arrow fa fa-angle-double-down bounce-top"></i>
-  </header>
-  
-  <!-- Main -->
-<div class="wrapper">
-  <main>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis qui nobis quibusdam mollitia eaque neque dolores corporis dicta. Exercitationem inventore tempora ea sequi facere culpa, similique eligendi est corporis?</p>
-    <!-- Form for questions -->
-    <form action="" autocomplete="off">
-      <!-- Container for question one -->
-      <div class="question q1" role="radiogroup">
-        <h2>Beverage</h2>
-        <div class="op1">
-          <input type="radio" value="cocktail" id="cocktail" name="question1">
-          <label for="cocktail">Cocktail</label>
-        </div>
 
-        <div class="op2">
-          <input type="radio" value="mocktail" id="mocktail" name="question1">
-          <label for="mocktail">Mocktail</label>
-        </div>
-      </div>
-      <!-- Container for question two -->
-      <div class="question q2" role="radiogroup">
-        <h2>Style</h2>
-        <div class="op1">
-          <input type="radio" id="classic" name="question2">
-          <label for="classic">Classic</label>
-        </div>
-
-        <div class="op2">
-          <input type="radio" id="fancy" name="question2">
-          <label for="fancy">Fancy</label>
-        </div>
-      </div>
-
-      <button class="submit" type="submit">Pour me a drink</button>
-    </form>
-
-    <!-- Recipe card section -->
-    <section class="recipeCard">
-      <div class="imgWrapper">
-        <img src="" alt="">
-      </div>
-      <div class="copyWrapper">
-        <h2 class="drinkName"></h2>
-        <ul>
-          <!-- Display items -->
-        </ul>
-      </div>
-    </section>
-  </main>
-</div>
-
-<!-- jQuery and JavaScript -->
-<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-<script src="./script/script.js"></script>
-</body>
+    <!-- jQuery and JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
