@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500&display=swap"
+  rel="stylesheet" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c53f7e277a.js" crossorigin="anonymous"></script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="shmedi.css">
@@ -30,12 +31,12 @@
       <div class="question q1" role="radiogroup">
         <h2>Beverage</h2>
         <div class="op1">
-          <input type="radio" id="cocktail" name="question1">
+          <input type="radio" value="cocktail" id="cocktail" name="question1">
           <label for="cocktail">Cocktail</label>
         </div>
 
         <div class="op2">
-          <input type="radio" id="mocktail" name="question1">
+          <input type="radio" value="mocktail" id="mocktail" name="question1">
           <label for="mocktail">Mocktail</label>
         </div>
       </div>
@@ -52,6 +53,8 @@
           <label for="fancy">Fancy</label>
         </div>
       </div>
+
+      <button class="submit" type="submit">Pour me a drink</button>
     </form>
 
     <!-- Recipe card section -->
@@ -60,12 +63,9 @@
         <img src="" alt="">
       </div>
       <div class="copyWrapper">
-        <h2>Recipe</h2>
+        <h2 class="drinkName"></h2>
         <ul>
-          <li>ingredient</li>
-          <li>ingredient</li>
-          <li>glass</li>
-          <li>prep</li>
+          <!-- Display items -->
         </ul>
       </div>
     </section>
@@ -74,6 +74,6 @@
 
 <!-- jQuery and JavaScript -->
 <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-<script src="./assets/script.js"></script>
+<script src="./script/script.js"></script>
 </body>
 </html>

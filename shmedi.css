@@ -68,8 +68,9 @@ html {
 body {
   background-color: rgb(1, 1, 1);
   color: #fff;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
+  font-weight: 300;
 }
 
 header {
