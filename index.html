@@ -3,79 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts (Montserrat - Lizz's Mock Up) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/c53f7e277a.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="lizzMockUp.css" />
-    <title>salut.</title>
+    <link rel="stylesheet" href="shmedi.css" />
+    <title>projectFour</title>
   </head>
   <body>
-    <div class="wrapper">
-      <!-- Header -->
-      <header>
+    <!-- Header -->
+    <header>
+      <div class="wrapper logoContainer flicker-in-1">
+        <i class="fas fa-cocktail"></i>
         <h1>salut.</h1>
-        <p>
-          Looking for your signature drink? Our bespoke bartending app helps you
-          find your perfect match. A well curated list of cocktails has been
-          carefully selected to help you cut through the noise and find the
-          cocktail recipe that's perfect for you.
-        </p>
-      </header>
+      </div>
+      <i class="arrow fa fa-angle-double-down bounce-top"></i>
+    </header>
 
-      <!-- Main -->
+    <!-- Main -->
+    <div class="wrapper">
       <main>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis qui
+          nobis quibusdam mollitia eaque neque dolores corporis dicta.
+          Exercitationem inventore tempora ea sequi facere culpa, similique
+          eligendi est corporis?
+        </p>
         <!-- Form for questions -->
         <form action="" autocomplete="off">
-          <h2>What are you in the mood for?</h2>
           <!-- Container for question one -->
           <div class="question q1" role="radiogroup">
-            <h3>Cocktail or Mocktail?</h3>
-            <label for="cocktail">
-              Cocktail
-              <input type="radio" id="cocktail" name="question1" />
-            </label>
+            <h2>Beverage</h2>
+            <div class="op1">
+              <input
+                type="radio"
+                value="cocktail"
+                id="cocktail"
+                name="question1"
+              />
+              <label for="cocktail">Cocktail</label>
+            </div>
 
-            <label for="mocktail">
-              Mocktail
-              <input type="radio" id="mocktail" name="question1" />
-            </label>
+            <div class="op2">
+              <input
+                type="radio"
+                value="mocktail"
+                id="mocktail"
+                name="question1"
+              />
+              <label for="mocktail">Mocktail</label>
+            </div>
           </div>
           <!-- Container for question two -->
           <div class="question q2" role="radiogroup">
-            <h3>Classic or Fancy?</h3>
+            <h2>Style</h2>
+            <div class="op1">
+              <input
+                type="radio"
+                id="classic"
+                name="question2"
+                value="classic"
+              />
+              <label for="classic">Classic</label>
+            </div>
 
-            <!-- Lizz Mockup - Nested the inputs in the labels so that the invisble radios aren't taking up space in the layout -->
-            <label for="classic">
-              Classic
-              <input type="radio" id="classic" name="question2" />
-            </label>
+            <div class="op2">
+              <input type="radio" id="fancy" name="question2" value="fancy" />
+              <label for="fancy">Fancy</label>
+            </div>
+          </div>
 
-            <label for="fancy" class="selected">
-              Fancy
-              <input type="radio" id="fancy" name="question2" />
-            </label>
-          </div>
-          <!-- Lizz MockUp -- Added Button to style "find results" -->
-          <div class="btnWrapper">
-            <button type="submit" class="submit">Pour me a drink</button>
-          </div>
+          <button class="submit" type="submit">Pour me a drink</button>
         </form>
 
         <!-- Recipe card section -->
         <section class="recipeCard">
           <div class="imgWrapper">
-            <img src="" alt="" />
+            <img class="drinkImg" src="" alt="" />
           </div>
           <div class="copyWrapper">
-            <h2>Recipe</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-              repellat reiciendis cumque tempore numquam labore? Pariatur eius
-              accusamus deleniti corrupti!
-            </p>
+            <h2 class="drinkName"></h2>
+            <ul>
+              <li class="li1"></li>
+              <li class="li2"></li>
+              <li class="li3"></li>
+              <li class="li4 hide"></li>
+            </ul>
+            <p class="instructions"></p>
           </div>
         </section>
       </main>
@@ -87,6 +106,6 @@
       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/script.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
