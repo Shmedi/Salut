@@ -176,15 +176,19 @@ salut.checkOptions = (options) => {
     }
   } else if (choice === "multiple") {
     if (beverage === "cocktail" && type === "classic") {
+      // Moscow Mule / Greyhound / Sidecar
       const classicCocktails = ["11009", "17252", "12198"];
       salut.randomDrink(classicCocktails);
     } else if (beverage === "cocktail" && type === "fancy") {
+      // Gagliardio / Valencia / Blackthorn
       const fancyCocktails = ["12758", "12434", "11106"];
       salut.randomDrink(fancyCocktails);
     } else if (beverage === "mocktail" && type === "classic") {
+      // Limade / Ipamena / Afterglow
       const classicMocktails = ["12704", "17176", "12560"];
       salut.randomDrink(classicMocktails);
     } else if (beverage === "mocktail" && type === "fancy") {
+      // Sweet Bananas / Egg Cream / Psych Vitamin Light
       const fancyMocktails = ["12742", "12668", "15092"];
       salut.randomDrink(fancyMocktails);
     }
