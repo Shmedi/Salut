@@ -299,6 +299,45 @@ body {
   font-weight: 300;
 }
 
+h1 {
+  color: #da1337;
+  font-size: 15rem;
+  padding-top: 120px;
+  font-family: "Comfortaa", cursive;
+  text-shadow: 0 0 10px #da1337;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #da1337;
+  font-size: 3.2rem;
+  padding: 25px 0;
+  text-align: center;
+  width: 100%;
+}
+
+h3 {
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+p {
+  font-size: 2.4rem;
+  padding-top: 100px;
+  color: #c5c5c5;
+}
+
+i {
+  color: #edff00;
+  padding: 120px 20px 0 150px;
+  font-size: 13rem;
+  text-shadow: 0 0 10px #edff00;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1280px;
@@ -660,7 +699,7 @@ header::before {
 }
 
 header .arrow {
-  color: rgba(123, 255, 248, 0.635);
+  color: rgba(122, 255, 248, 0.635);
   font-size: 8rem;
   position: absolute;
   bottom: 20px;
@@ -674,33 +713,8 @@ header .arrow {
   display: flex;
 }
 
-.logoContainer h1 {
-  color: #da1337;
-  font-size: 15rem;
-  padding-top: 120px;
-  font-family: "Comfortaa", cursive;
-  text-shadow: 0 0 10px #da1337;
-}
-
-.logoContainer i {
-  color: #edff00;
-  padding: 120px 20px 0 150px;
-  font-size: 13rem;
-  text-shadow: 0 0 10px #edff00;
-}
-
 main {
   height: 100vh;
-}
-
-main h2 {
-  text-transform: uppercase;
-}
-
-main p {
-  font-size: 2.4rem;
-  padding-top: 100px;
-  color: #c5c5c5;
 }
 
 main .submit {
@@ -738,14 +752,6 @@ form .question {
   width: 32.33%;
 }
 
-form h2 {
-  color: #da1337;
-  font-size: 2.5rem;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
-
 form label {
   border: 3px solid #edff00;
   -webkit-box-shadow: 0 0 3px #edff00;
@@ -755,7 +761,26 @@ form label {
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: border-color 150ms, -webkit-transform 150ms;
+  transition: border-color 150ms, -webkit-transform 150ms;
+  transition: border-color 150ms, transform 150ms;
+  transition: border-color 150ms, transform 150ms, -webkit-transform 150ms;
   width: 60%;
+}
+
+form label:hover, form label:focus-within {
+  cursor: pointer;
+  border-color: #7bfff8;
+  -webkit-box-shadow: 0 0 3px #7bfff8;
+          box-shadow: 0 0 3px #7bfff8;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+form label.selected {
+  border-color: #da1337;
+  -webkit-box-shadow: 0 0 3px #da1337;
+          box-shadow: 0 0 3px #da1337;
 }
 
 form input[type="radio"] {

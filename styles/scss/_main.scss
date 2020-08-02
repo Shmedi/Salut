@@ -1,16 +1,6 @@
 main {
   height: 100vh;
 
-  h2 {
-    text-transform: uppercase;
-  }
-
-  p {
-    font-size: 2.4rem;
-    padding-top: 100px;
-    color: rgb(197, 197, 197);
-  }
-
   .submit {
     width: 30%;
     margin: 0 auto;
@@ -26,32 +16,36 @@ form {
 
   .question {
     display: flex;
-    border: 4px solid #7bfff8;
+    border: 4px solid $primaryColor;
     border-radius: 20px;
-    box-shadow: 0 0 5px #7bfff8;
+    box-shadow: 0 0 5px $primaryColor;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 20px 10px;
     width: 32.33%;
   }
 
-  h2 {
-    color: rgb(218, 19, 55);
-    font-size: 2.5rem;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-  }
-
   label {
-    border: 3px solid #edff00;
-    box-shadow: 0 0 3px #edff00;
+    border: 3px solid $accentColor;
+    box-shadow: 0 0 3px $accentColor;
     border-radius: 10px;
     margin: 5px auto;
     padding: 10px 0;
     text-align: center;
     text-transform: uppercase;
+    transition: border-color 150ms, transform 150ms;
     width: 60%;
+    &:hover,
+    &:focus-within {
+      cursor: pointer;
+      border-color: $primaryColor;
+      box-shadow: 0 0 3px $primaryColor;
+      transform: scale(1.03);
+    }
+    &.selected {
+      border-color: $secondaryColor;
+      box-shadow: 0 0 3px $secondaryColor;
+    }
   }
 
   input[type="radio"] {
@@ -63,15 +57,15 @@ form {
 
 .recipeCard {
   margin: 0 auto;
-  border: 4px solid #edff00;
-  box-shadow: 0 0 5px #edff00;
+  border: 4px solid $accentColor;
+  box-shadow: 0 0 5px $accentColor;
   display: flex;
   justify-content: space-between;
   padding: 30px 20px;
   width: 100%;
 
   h2 {
-    color: rgb(218, 19, 55);
+    color: $secondaryColor;
     font-size: 4.5rem;
   }
 
