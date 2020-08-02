@@ -476,8 +476,10 @@ html {
   font-size: 62.5%;
 }
 
+/* !!! Changed background colour ever so slighty*/
 body {
-  background-color: rgb(1, 1, 1);
+  /* background-color: rgb(1, 1, 1); */
+  background: rgb(4, 5, 8);
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
@@ -487,37 +489,35 @@ body {
 header {
   display: flex;
   height: 100vh;
-  background: url(assets/images/background.jpg);
+  background: rgb(7, 11, 22);
   background-size: cover;
   position: relative;
 }
 
-.logoContainer {
-  display: flex;
+/* !!! Added the image as a background image to help increase readabiity  */
+header::before {
+  background: url(assets/images/background.jpg) no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  opacity: 0.5;
+  top: 0;
+  width: 100%;
 }
 
-header h1 {
+h1 {
   color: rgb(218, 19, 55);
   font-size: 15rem;
   padding-top: 120px;
   font-family: "Comfortaa", cursive;
-  text-shadow: 0 0 30px rgb(218, 19, 55);
+  text-shadow: 0 0 10px rgb(218, 19, 55);
 }
 
-.logoContainer i {
-  color: #edff00;
-  padding: 120px 20px 0 150px;
-  font-size: 15rem;
-  text-shadow: 0 0 20px #edff00;
-}
-
-.arrow {
-  color: #7bfff8a2;
-  font-size: 8rem;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  cursor: pointer;
+/* !!! Change headings to uppercase */
+h2 {
+  text-transform: uppercase;
 }
 
 main {
@@ -540,6 +540,37 @@ img {
   width: 100%;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* Header Styles */
+
+.logoContainer {
+  display: flex;
+}
+
+.logoContainer i {
+  color: #edff00;
+  padding: 120px 20px 0 150px;
+  font-size: 13rem;
+  text-shadow: 0 0 10px #edff00;
+}
+
+.arrow {
+  color: #7bfff8a2;
+  font-size: 8rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  cursor: pointer;
+}
+
 .question {
   display: flex;
   border: 4px solid #7bfff8;
@@ -549,6 +580,8 @@ img {
   height: 100px;
   margin: 60px 0 40px 0;
 }
+
+/* Quiz Section */
 .q1 {
   margin-right: 20px;
 }
@@ -582,11 +615,10 @@ img {
   margin: 0 auto;
   border: 4px solid #edff00;
   box-shadow: 0 0 5px #edff00;
-  /* border-radius: 20px; */
   display: flex;
   justify-content: space-between;
+  padding: 30px 20px;
   width: 100%;
-  height: 350px;
 }
 
 .recipeCard h2 {
@@ -595,12 +627,8 @@ img {
 }
 
 .copyWrapper {
-  width: 60%;
+  width: 65%;
 }
-
-/* .recipeCard ul {
-  padding: 10px 80px 0 500px;
-} */
 
 /* Changes element display */
 .hide {
@@ -613,13 +641,4 @@ img {
 
 .imgWrapper {
   width: 25%;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  list-style-type: none;
 }
