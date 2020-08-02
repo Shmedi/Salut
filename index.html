@@ -37,9 +37,10 @@
         <!-- Form for questions -->
         <form action="" autocomplete="off">
           <!-- Container for question one -->
-          <div class="question q1" role="radiogroup">
-            <h2>Beverage</h2>
-            <div class="option">
+          <div class="question" role="radiogroup">
+            <h2>Cocktail or Mocktail?</h2>
+            <label for="cocktail">
+              Cocktail
               <input
                 type="radio"
                 value="cocktail"
@@ -47,10 +48,10 @@
                 name="question1"
                 required
               />
-              <label for="cocktail">Cocktail</label>
-            </div>
+            </label>
 
-            <div class="option">
+            <label for="mocktail">
+              Mocktail
               <input
                 type="radio"
                 value="mocktail"
@@ -58,13 +59,14 @@
                 name="question1"
                 required
               />
-              <label for="mocktail">Mocktail</label>
-            </div>
+            </label>
           </div>
           <!-- Container for question two -->
-          <div class="question q2" role="radiogroup">
-            <h2>Style</h2>
-            <div class="option">
+          <div class="question" role="radiogroup">
+            <h2>Classic or Fancy?</h2>
+
+            <label for="classic">
+              Classic
               <input
                 type="radio"
                 value="classic"
@@ -72,24 +74,24 @@
                 name="question2"
                 required
               />
-              <label for="classic">Classic</label>
-            </div>
+            </label>
 
-            <div class="option">
+            <label for="fancy">
+              Fancy
               <input
                 type="radio"
                 value="fancy"
                 id="fancy"
                 name="question2"
                 required
-              />
-              <label for="fancy">Fancy</label>
-            </div>
+            /></label>
           </div>
+          <!-- Container for question three -->
+          <div class="question" role="radiogroup">
+            <h2>Brave or Timid?</h2>
 
-          <div class="question q3" role="radiogroup">
-            <h2>Optional</h2>
-            <div class="option">
+            <label for="multiple">
+              Brave
               <input
                 type="radio"
                 value="multiple"
@@ -97,10 +99,10 @@
                 name="question3"
                 required
               />
-              <label for="multiple">Feeling Lucky</label>
-            </div>
+            </label>
 
-            <div class="option">
+            <label for="single">
+              Timid
               <input
                 type="radio"
                 value="single"
@@ -108,8 +110,7 @@
                 name="question3"
                 required
               />
-              <label for="single">Tried & True</label>
-            </div>
+            </label>
           </div>
 
           <button class="submit" type="submit">Pour me a drink</button>
