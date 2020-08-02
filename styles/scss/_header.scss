@@ -1,2 +1,53 @@
 // Header
 
+@import "animation";
+
+// Background & Button Scroll
+
+header {
+  display: flex;
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    background: url(../assets/images/background.jpg) no-repeat;
+    background-size: cover;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    width: 100%;
+  }
+
+  .arrow {
+    color: $arrowColor;
+    font-size: 8rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    cursor: pointer;
+  }
+}
+
+// Logo & Title
+
+.logoContainer {
+  display: flex;
+
+  h1 {
+    color: rgb(218, 19, 55);
+    font-size: 15rem;
+    padding-top: 120px;
+    font-family: "Comfortaa", cursive;
+    text-shadow: 0 0 10px rgb(218, 19, 55);
+  }
+
+  i {
+    color: #edff00;
+    padding: 120px 20px 0 150px;
+    font-size: 13rem;
+    text-shadow: 0 0 10px #edff00;
+  }
+}

@@ -1,0 +1,26 @@
+.wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  background: $darkest;
+  color: $lightest;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+// Changes element display
+
+.hide {
+  display: none;
+}
