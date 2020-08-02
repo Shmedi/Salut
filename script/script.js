@@ -80,7 +80,7 @@ salut.checkOptions = (options) => {
   const type = options.type;
   if (beverage === "cocktail" && type === "classic") {
     // mojito
-    rsalut.drinkId = "11000";
+    salut.drinkId = "11000";
   } else if (beverage === "cocktail" && type === "fancy") {
     // Funk & Soul
     salut.drinkId = "17266";
