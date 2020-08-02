@@ -626,6 +626,10 @@ ul li {
   font-size: 4.5rem;
 }
 
+.imgWrapper {
+  width: 25%;
+}
+
 .copyWrapper {
   width: 65%;
 }
@@ -633,12 +637,4 @@ ul li {
 /* Changes element display */
 .hide {
   display: none;
-}
-
-.show {
-  display: block;
-}
-
-.imgWrapper {
-  width: 25%;
 }

@@ -28,7 +28,7 @@
     <!-- Main -->
     <div class="wrapper">
       <main>
-        <p>
+        <p class="intro">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis qui
           nobis quibusdam mollitia eaque neque dolores corporis dicta.
           Exercitationem inventore tempora ea sequi facere culpa, similique
@@ -45,6 +45,7 @@
                 value="cocktail"
                 id="cocktail"
                 name="question1"
+                required
               />
               <label for="cocktail">Cocktail</label>
             </div>
@@ -55,6 +56,7 @@
                 value="mocktail"
                 id="mocktail"
                 name="question1"
+                required
               />
               <label for="mocktail">Mocktail</label>
             </div>
@@ -68,12 +70,19 @@
                 value="classic"
                 id="classic"
                 name="question2"
+                required
               />
               <label for="classic">Classic</label>
             </div>
 
             <div class="option">
-              <input type="radio" value="fancy" id="fancy" name="question2" />
+              <input
+                type="radio"
+                value="fancy"
+                id="fancy"
+                name="question2"
+                required
+              />
               <label for="fancy">Fancy</label>
             </div>
           </div>
@@ -86,12 +95,19 @@
                 value="multiple"
                 id="multiple"
                 name="question3"
+                required
               />
               <label for="multiple">Feeling Lucky</label>
             </div>
 
             <div class="option">
-              <input type="radio" value="single" id="single" name="question3" />
+              <input
+                type="radio"
+                value="single"
+                id="single"
+                name="question3"
+                required
+              />
               <label for="single">Tried & True</label>
             </div>
           </div>
@@ -100,10 +116,11 @@
         </form>
 
         <!-- Recipe card section -->
-        <section class="recipeCard">
+        <section class="recipeCard hide">
           <div class="imgWrapper">
             <img class="drinkImg" src="" alt="" />
           </div>
+
           <div class="copyWrapper">
             <h2 class="drinkName"></h2>
             <ul>
@@ -115,6 +132,8 @@
             <p class="instructions"></p>
           </div>
         </section>
+
+        <button type="button" class="reset hide">Make me another drink</button>
       </main>
     </div>
 

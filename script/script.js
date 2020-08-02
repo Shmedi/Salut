@@ -100,6 +100,20 @@ salut.randomDrink = function (array) {
   salut.drinkId = array[randomNumber];
 };
 
+// Shows the recipe Card
+salut.showCard = () => {
+  setTimeout(function () {
+    $(".recipeCard").removeClass("hide");
+    $(".reset").removeClass("hide");
+  }, 500);
+};
+
+// Hides the form on submit
+salut.hideForm = () => {
+  $("form").addClass("hide");
+  $(".intro").addClass("hide");
+};
+
 // Display the API results to the recipe card ---
 salut.displayRecipe = function (result) {
   // drink object api variable
@@ -154,6 +168,15 @@ salut.onSubmit = function () {
     event.preventDefault();
     salut.checkOptions(salut.options);
     salut.getDrink(salut.drinkId);
+    salut.hideForm();
+    salut.showCard();
+  });
+};
+
+// Reset the page
+salut.onReset = function () {
+  $(".reset").on("click", function () {
+    location.reload();
   });
 };
 
@@ -161,6 +184,7 @@ salut.onSubmit = function () {
 salut.init = function () {
   salut.onSubmit();
   salut.handleRadio();
+  salut.onReset();
 };
 
 // Document ready ---
