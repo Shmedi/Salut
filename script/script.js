@@ -1,8 +1,16 @@
-// Create a namespace object
-
+// Namespace object ---
 const salut = {};
 
+//Chosen drink ID ---
 salut.drinkId = "";
+
+// User options object ---
+salut.options = {
+  beverage: "",
+  type: "",
+};
+
+// Drinks array stores all possible drinks ---
 salut.drinks = [
   {
     name: "Strawberry Lemonade",
@@ -30,8 +38,7 @@ salut.drinks = [
   },
 ];
 
-// Call our API using a parameter of selected drink
-
+// Calls API and finds selected drink ---
 salut.getDrink = function (drinkId) {
   $.ajax({
     url: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`,
@@ -42,110 +49,114 @@ salut.getDrink = function (drinkId) {
       i: drinkId,
     },
   }).then(function (result) {
-    console.log(result);
-    salut.displayDrink(result);
+    salut.displayRecipe(result);
   });
 };
 
-// Add event listeners to the radio buttons
-
-// Add event listener to the submit button
-salut.onSubmit = function () {
-  $("form").on("submit", function (event) {
-    event.preventDefault();
-    salut.getDrink(salut.drinkId);
-  });
-};
-
-salut.displayDrink = function (result) {
-  const drink = result.drinks[0].strDrink;
-  const base = result.drinks[0].strIngredient1;
-  $(".drinkName").text(drink);
-  $("ul").append(`<li>${base}</li>`);
-};
-
-// Check which options user selected and make them a drink
-
-// Call our API function that has our parameter in it
-
-// Add event listeners to the radio buttons
+// Add event listeners to the radio buttons ---
 salut.handleRadio = function () {
   $("input[type=radio]").on("click", function () {
     // Error handle for beverage selection before drink style
     // Select a drink based on the user's choice
-    let classic = "";
-    let fancy = "";
-
-    if (this.value === "cocktail") {
-      classic = salut.drinks[2].name;
-      fancy = salut.drinks[3].name;
-    } else if (this.value === "mocktail") {
-      classic = salut.drinks[0].name;
-      fancy = salut.drinks[1].name;
-    }
-
-    if (classic === "mojito" && this.value === "classic") {
-      console.log(this);
-    } else if (classic === "strawberry lemonade" && this.value === "fancy") {
-      console.log(this);
+    switch (this.value) {
+      case "cocktail":
+        salut.options.beverage = "cocktail";
+        break;
+      case "mocktail":
+        salut.options.beverage = "mocktail";
+        break;
+      case "classic":
+        salut.options.type = "classic";
+        break;
+      case "fancy":
+        salut.options.type = "fancy";
     }
   });
 };
 
-// Display the results to the page
-salut.displayDrink = function (result) {
-  // Drink Object
+// Check user options and find the corresponding drink
+salut.checkOptions = (options) => {
+  const beverage = options.beverage;
+  const type = options.type;
+  if (beverage === "cocktail" && type === "classic") {
+    // mojito
+    rsalut.drinkId = "11000";
+  } else if (beverage === "cocktail" && type === "fancy") {
+    // Funk & Soul
+    salut.drinkId = "17266";
+  } else if (beverage === "mocktail" && type === "classic") {
+    // Strawberry Lemondade
+    salut.drinkId = "13036";
+  } else if (beverage === "mocktail" && type === "fancy") {
+    // Just a moonmint
+    salut.drinkId = "12688";
+  }
+};
+
+// Display the API results to the recipe card ---
+salut.displayRecipe = function (result) {
+  // drink object api variable
   const drinkObj = result.drinks[0];
-  // Drink Name
+
+  // drink name varibale
   const drink = drinkObj.strDrink;
 
-  // Drink Ingredients
+  // drink ingredient variables
   const ingredient1 = drinkObj.strIngredient1;
   const ingredient2 = drinkObj.strIngredient2;
   const ingredient3 = drinkObj.strIngredient3;
   const ingredient4 = drinkObj.strIngredient4;
 
-  // Drink Measurements
+  // ingredient measurement varibales
   const measure1 = drinkObj.strMeasure1;
   const measure2 = drinkObj.strMeasure2;
   const measure3 = drinkObj.strMeasure3;
   const measure4 = drinkObj.strMeasure4;
 
-  // Instructions
+  // recipe instruction variable
   const instructions = drinkObj.strInstructions;
 
-  // Image
+  // drink image variable
   const drinkImg = drinkObj.strDrinkThumb;
 
-  // Remove hide class only if ingredient4 is present
+  // displays fourth list item only if fourth ingredient is present
   const checkIngredient = (ingredient4) => {
     if (ingredient4 !== null) {
       $(".li4").removeClass("hide");
     }
   };
 
-  // Append some stuff to the page the page
-
-  // Heading
+  // appends heading
   $(".drinkName").text(drink);
 
-  // List
+  // appends ingredient list
   $(".li1").text(`${measure1} ${ingredient1}`);
   $(".li2").text(`${measure2} ${ingredient2}`);
   $(".li3").text(`${measure3} ${ingredient3}`);
   $(".li4").text(`${measure4} ${ingredient4}`);
 
-  // Instructions
+  // appends instructions
   $(".instructions").text(instructions);
   $(".drinkImg").attr("src", drinkImg).attr("alt", drink);
   checkIngredient(ingredient4);
 };
 
+// Add event listener to the submit button ---
+salut.onSubmit = function () {
+  $("form").on("submit", function (event) {
+    event.preventDefault();
+    salut.checkOptions(salut.options);
+    salut.getDrink(salut.drinkId);
+  });
+};
+
+// Initializes salut application ---
 salut.init = function () {
   salut.onSubmit();
   salut.handleRadio();
 };
 
+// Document ready ---
 $(function () {
   salut.init();
 });
