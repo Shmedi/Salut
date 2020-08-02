@@ -11,6 +11,106 @@ salut.options = {
   choice: "",
 };
 
+// Drinks array stores all possible drinks ---
+salut.drinks = [
+  {
+    name: "Strawberry Lemonade",
+    id: "13036",
+    style: "mocktail",
+    type: "classic",
+  },
+  {
+    name: "Just a Moonmint",
+    id: "12688",
+    style: "mocktail",
+    type: "fancy",
+  },
+  {
+    name: "Mojito",
+    id: "11000",
+    style: "cocktail",
+    type: "classic",
+  },
+  {
+    name: "A Night in Old Mandalay",
+    id: "17832",
+    style: "cocktail",
+    type: "fancy",
+  },
+  {
+    name: "Greyhound",
+    id: "17252",
+    style: "cocktail",
+    type: "classic",
+  },
+  {
+    name: "Egg Cream",
+    id: "12668",
+    style: "mocktail",
+    type: "fancy",
+  },
+  {
+    name: "Afterglow",
+    id: "12560",
+    style: "mocktail",
+    type: "classic",
+  },
+  {
+    name: "Gagliardo",
+    id: "12758",
+    style: "cocktail",
+    type: "fancy",
+  },
+  {
+    name: "Valnecia Cocktail",
+    id: "12434",
+    style: "cocktail",
+    type: "fancy",
+  },
+  {
+    name: "Moscow Mule",
+    id: "11009",
+    style: "cocktail",
+    type: "classic",
+  },
+  {
+    name: "Ipamena",
+    id: "17176",
+    style: "mocktail",
+    type: "classic",
+  },
+  {
+    name: "Psych Vitamin Light",
+    id: "15092",
+    style: "mocktail",
+    type: "fancy",
+  },
+  {
+    name: "Sweet Bananas",
+    id: "12742",
+    style: "mocktail",
+    type: "fancy",
+  },
+  {
+    name: "Limeaid",
+    id: "12704",
+    style: "mocktail",
+    type: "classic",
+  },
+  {
+    name: "Sidecar Cocktail",
+    id: "12198",
+    style: "cocktail",
+    type: "classic",
+  },
+  {
+    name: "blackthorn",
+    id: "11106",
+    style: "cocktail",
+    type: "fancy",
+  },
+];
+
 // Calls API and finds selected drink ---
 salut.getDrink = function (drinkId) {
   $.ajax({
@@ -58,29 +158,46 @@ salut.handleRadio = function () {
 salut.checkOptions = (options) => {
   const beverage = options.beverage;
   const type = options.type;
-  if (beverage === "cocktail" && type === "classic") {
-    // mojito
-    salut.drinkId = "11000";
-  } else if (beverage === "cocktail" && type === "fancy") {
-    // Funk & Soul
-    salut.drinkId = "17832";
-  } else if (beverage === "mocktail" && type === "classic") {
-    // Strawberry Lemonade
-    salut.drinkId = "13036";
-  } else if (beverage === "mocktail" && type === "fancy") {
-    // Just a moonmint
-    salut.drinkId = "12688";
+  const choice = options.choice;
+
+  if (choice === "single") {
+    if (beverage === "cocktail" && type === "classic") {
+      // Mojito
+      salut.drinkId = "11000";
+    } else if (beverage === "cocktail" && type === "fancy") {
+      // A Night in Old Mandalay
+      salut.drinkId = "17832";
+    } else if (beverage === "mocktail" && type === "classic") {
+      // Strawberry Lemonade
+      salut.drinkId = "13036";
+    } else if (beverage === "mocktail" && type === "fancy") {
+      // Just a moonmint
+      salut.drinkId = "12688";
+    }
+  } else if (choice === "multiple") {
+    if (beverage === "cocktail" && type === "classic") {
+      // Moscow Mule / Greyhound / Sidecar
+      const classicCocktails = ["11009", "17252", "12198"];
+      salut.randomDrink(classicCocktails);
+    } else if (beverage === "cocktail" && type === "fancy") {
+      // Gagliardio / Valencia / Blackthorn
+      const fancyCocktails = ["12758", "12434", "11106"];
+      salut.randomDrink(fancyCocktails);
+    } else if (beverage === "mocktail" && type === "classic") {
+      // Limade / Ipamena / Afterglow
+      const classicMocktails = ["12704", "17176", "12560"];
+      salut.randomDrink(classicMocktails);
+    } else if (beverage === "mocktail" && type === "fancy") {
+      // Sweet Bananas / Egg Cream / Psych Vitamin Light
+      const fancyMocktails = ["12742", "12668", "15092"];
+      salut.randomDrink(fancyMocktails);
+    }
   }
 };
 
-salut.randomDrink = function () {
-  const classicCocktails = ["11009", "17252", "12198"];
-  const fancyCocktails = ["12758", "12434", "11106"];
-  const classicMocktails = ["12704", "17176", "12560"];
-  const fancyMocktails = ["12742", "12668", "15092"];
-
+salut.randomDrink = function (array) {
   let randomNumber = Math.floor(Math.random() * 3);
-  console.log(classicMocktails[randomNumber]);
+  salut.drinkId = array[randomNumber];
 };
 
 // Display the API results to the recipe card ---
