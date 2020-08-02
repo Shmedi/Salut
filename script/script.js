@@ -8,6 +8,7 @@ salut.drinkId = "";
 salut.options = {
   beverage: "",
   type: "",
+  choice: "",
 };
 
 // Drinks array stores all possible drinks ---
@@ -142,6 +143,13 @@ salut.handleRadio = function () {
         break;
       case "fancy":
         salut.options.type = "fancy";
+        break;
+      case "multiple":
+        salut.options.choice = "multiple";
+        break;
+      case "single":
+        salut.options.choice = "single";
+        break;
     }
   });
 };
@@ -155,9 +163,9 @@ salut.checkOptions = (options) => {
     salut.drinkId = "11000";
   } else if (beverage === "cocktail" && type === "fancy") {
     // Funk & Soul
-    salut.drinkId = "17266";
+    salut.drinkId = "178332";
   } else if (beverage === "mocktail" && type === "classic") {
-    // Strawberry Lemondade
+    // Strawberry Lemonade
     salut.drinkId = "13036";
   } else if (beverage === "mocktail" && type === "fancy") {
     // Just a moonmint
@@ -165,12 +173,22 @@ salut.checkOptions = (options) => {
   }
 };
 
+salut.randomDrink = function () {
+  const classicCocktails = ["11009", "17252", "12198"];
+  const fancyCocktails = ["12758", "12434", "11106"];
+  const classicMocktails = ["12704", "17176", "12560"];
+  const fancyMocktails = ["12742", "12668", "15092"];
+
+  let randomNumber = Math.floor(Math.random() * 3);
+  console.log(classicMocktails[randomNumber]);
+};
+
 // Display the API results to the recipe card ---
 salut.displayRecipe = function (result) {
   // drink object api variable
   const drinkObj = result.drinks[0];
 
-  // drink name varibale
+  // drink name variable
   const drink = drinkObj.strDrink;
 
   // drink ingredient variables
