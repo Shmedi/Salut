@@ -11,106 +11,6 @@ salut.options = {
   choice: "",
 };
 
-// Drinks array stores all possible drinks ---
-salut.drinks = [
-  {
-    name: "Strawberry Lemonade",
-    id: "13036",
-    style: "mocktail",
-    type: "classic",
-  },
-  {
-    name: "Just a Moonmint",
-    id: "12688",
-    style: "mocktail",
-    type: "fancy",
-  },
-  {
-    name: "Mojito",
-    id: "11000",
-    style: "cocktail",
-    type: "classic",
-  },
-  {
-    name: "Funk & Soul",
-    id: "178332",
-    style: "cocktail",
-    type: "fancy",
-  },
-  {
-    name: "Greyhound",
-    id: "17252",
-    style: "cocktail",
-    type: "classic",
-  },
-  {
-    name: "Egg Cream",
-    id: "12668",
-    style: "mocktail",
-    type: "fancy",
-  },
-  {
-    name: "Afterglow",
-    id: "12560",
-    style: "mocktail",
-    type: "classic",
-  },
-  {
-    name: "Gagliardo",
-    id: "12758",
-    style: "cocktail",
-    type: "fancy",
-  },
-  {
-    name: "Valnecia Cocktail",
-    id: "12434",
-    style: "cocktail",
-    type: "fancy",
-  },
-  {
-    name: "Moscow Mule",
-    id: "11009",
-    style: "cocktail",
-    type: "classic",
-  },
-  {
-    name: "Ipamena",
-    id: "17176",
-    style: "mocktail",
-    type: "classic",
-  },
-  {
-    name: "Psych Vitamin Light",
-    id: "15092",
-    style: "mocktail",
-    type: "fancy",
-  },
-  {
-    name: "Sweet Bananas",
-    id: "12742",
-    style: "mocktail",
-    type: "fancy",
-  },
-  {
-    name: "Limeaid",
-    id: "12704",
-    style: "mocktail",
-    type: "classic",
-  },
-  {
-    name: "Sidecar Cocktail",
-    id: "12198",
-    style: "cocktail",
-    type: "classic",
-  },
-  {
-    name: "blackthorn",
-    id: "11106",
-    style: "cocktail",
-    type: "fancy",
-  },
-];
-
 // Calls API and finds selected drink ---
 salut.getDrink = function (drinkId) {
   $.ajax({
@@ -163,7 +63,7 @@ salut.checkOptions = (options) => {
     salut.drinkId = "11000";
   } else if (beverage === "cocktail" && type === "fancy") {
     // Funk & Soul
-    salut.drinkId = "178332";
+    salut.drinkId = "17832";
   } else if (beverage === "mocktail" && type === "classic") {
     // Strawberry Lemonade
     salut.drinkId = "13036";
