@@ -32,8 +32,8 @@ salut.drinks = [
     type: "classic",
   },
   {
-    name: "Funk & Soul",
-    id: "178332",
+    name: "A Night in Old Mandalay",
+    id: "17832",
     style: "cocktail",
     type: "fancy",
   },
@@ -158,29 +158,42 @@ salut.handleRadio = function () {
 salut.checkOptions = (options) => {
   const beverage = options.beverage;
   const type = options.type;
-  if (beverage === "cocktail" && type === "classic") {
-    // mojito
-    salut.drinkId = "11000";
-  } else if (beverage === "cocktail" && type === "fancy") {
-    // Funk & Soul
-    salut.drinkId = "178332";
-  } else if (beverage === "mocktail" && type === "classic") {
-    // Strawberry Lemonade
-    salut.drinkId = "13036";
-  } else if (beverage === "mocktail" && type === "fancy") {
-    // Just a moonmint
-    salut.drinkId = "12688";
+  const choice = options.choice;
+
+  if (choice === "single") {
+    if (beverage === "cocktail" && type === "classic") {
+      // Mojito
+      salut.drinkId = "11000";
+    } else if (beverage === "cocktail" && type === "fancy") {
+      // A Night in Old Mandalay
+      salut.drinkId = "17832";
+    } else if (beverage === "mocktail" && type === "classic") {
+      // Strawberry Lemonade
+      salut.drinkId = "13036";
+    } else if (beverage === "mocktail" && type === "fancy") {
+      // Just a moonmint
+      salut.drinkId = "12688";
+    }
+  } else if (choice === "multiple") {
+    if (beverage === "cocktail" && type === "classic") {
+      const classicCocktails = ["11009", "17252", "12198"];
+      salut.randomDrink(classicCocktails);
+    } else if (beverage === "cocktail" && type === "fancy") {
+      const fancyCocktails = ["12758", "12434", "11106"];
+      salut.randomDrink(fancyCocktails);
+    } else if (beverage === "mocktail" && type === "classic") {
+      const classicMocktails = ["12704", "17176", "12560"];
+      salut.randomDrink(classicMocktails);
+    } else if (beverage === "mocktail" && type === "fancy") {
+      const fancyMocktails = ["12742", "12668", "15092"];
+      salut.randomDrink(fancyMocktails);
+    }
   }
 };
 
-salut.randomDrink = function () {
-  const classicCocktails = ["11009", "17252", "12198"];
-  const fancyCocktails = ["12758", "12434", "11106"];
-  const classicMocktails = ["12704", "17176", "12560"];
-  const fancyMocktails = ["12742", "12668", "15092"];
-
+salut.randomDrink = function (array) {
   let randomNumber = Math.floor(Math.random() * 3);
-  console.log(classicMocktails[randomNumber]);
+  salut.drinkId = array[randomNumber];
 };
 
 // Display the API results to the recipe card ---
