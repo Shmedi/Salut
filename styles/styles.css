@@ -337,7 +337,7 @@ h3 span {
   font-size: 1.8rem;
 }
 
-main h2 {
+form h2 {
   color: #cfcfcf;
   text-align: center;
 }
@@ -875,6 +875,10 @@ form label input[type="radio"] {
 
 .recipeCard .copyWrapper {
   width: 65%;
+}
+
+.recipeCard .copyWrapper .instructions {
+  padding: 20px 0;
 }
 
 .hide {
