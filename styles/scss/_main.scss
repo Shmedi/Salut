@@ -38,7 +38,7 @@ form {
     }
     &.selected {
       border-color: $secondaryColor;
-      box-shadow: 0 0 3px $secondaryColor;
+      box-shadow: 0 0 5px $secondaryColor;
     }
     input[type="radio"] {
       opacity: 0;
@@ -51,21 +51,24 @@ form {
 .recipeCard {
   margin: 0 auto;
   border: 4px solid $accentColor;
+  border-radius: 20px;
   box-shadow: 0 0 5px $accentColor;
   display: flex;
   justify-content: space-between;
   padding: 30px 20px;
   width: 100%;
-
   h2 {
     color: $secondaryColor;
     font-size: 4.5rem;
   }
-
   .imgWrapper {
-    width: 25%;
+    width: 27%;
+    img {
+      border: 4px solid $primaryColor;
+      border-radius: 10px;
+      box-shadow: 0 0 5px $primaryColor;
+    }
   }
-
   .copyWrapper {
     width: 65%;
   }

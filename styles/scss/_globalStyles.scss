@@ -34,5 +34,7 @@ button {
   &:hover {
     cursor: pointer;
     transform: scale(1.03);
+    border-color: $accentColor;
+    box-shadow: 0 0 3px $accentColor;
   }
 }

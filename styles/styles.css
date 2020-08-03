@@ -382,6 +382,9 @@ button:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  border-color: #edff00;
+  -webkit-box-shadow: 0 0 3px #edff00;
+          box-shadow: 0 0 3px #edff00;
 }
 
 /* ----------------------------------------------
@@ -813,8 +816,8 @@ form label:hover, form label:focus-within {
 
 form label.selected {
   border-color: #da1337;
-  -webkit-box-shadow: 0 0 3px #da1337;
-          box-shadow: 0 0 3px #da1337;
+  -webkit-box-shadow: 0 0 5px #da1337;
+          box-shadow: 0 0 5px #da1337;
 }
 
 form label input[type="radio"] {
@@ -824,6 +827,7 @@ form label input[type="radio"] {
 .recipeCard {
   margin: 0 auto;
   border: 4px solid #edff00;
+  border-radius: 20px;
   -webkit-box-shadow: 0 0 5px #edff00;
           box-shadow: 0 0 5px #edff00;
   display: -webkit-box;
@@ -842,7 +846,14 @@ form label input[type="radio"] {
 }
 
 .recipeCard .imgWrapper {
-  width: 25%;
+  width: 27%;
+}
+
+.recipeCard .imgWrapper img {
+  border: 4px solid #7bfff8;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px #7bfff8;
+          box-shadow: 0 0 5px #7bfff8;
 }
 
 .recipeCard .copyWrapper {
