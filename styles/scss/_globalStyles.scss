@@ -1,6 +1,6 @@
 .wrapper {
   width: 90%;
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -17,4 +17,22 @@ img {
 
 ul li {
   list-style-type: none;
+}
+
+button {
+  background: transparent;
+  border: 4px solid $secondaryColor;
+  box-shadow: 0 0 3px $secondaryColor;
+  border-radius: 10px;
+  color: $lightest;
+  font-size: 2.5rem;
+  margin: 35px auto;
+  padding: 15px 0;
+  text-transform: uppercase;
+  transition: transform 150ms;
+  width: 30%;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
 }
