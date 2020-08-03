@@ -3,11 +3,11 @@
 @import "animation";
 
 // Background & Button Scroll
-
 header {
   height: 100vh;
   padding: 100px 0;
   position: relative;
+  max-width: 100vw;
   &::before {
     background: url(../assets/images/background.jpg) no-repeat;
     background-size: cover;

@@ -302,10 +302,10 @@ body {
 }
 
 h1 {
-  color: #ff2c84;
+  color: #f80067;
   font-family: "Comfortaa", cursive;
   font-size: 14rem;
-  text-shadow: 0 0 10px #ff2c84;
+  text-shadow: 0 0 10px #f80067;
   margin: auto;
   width: 75%;
 }
@@ -343,7 +343,7 @@ form h2 {
 }
 
 .recipeCard h2 {
-  color: #ff2c84;
+  color: #f80067;
 }
 
 body {
@@ -369,9 +369,9 @@ ul li {
 
 button {
   background: transparent;
-  border: 5px solid #ff2c84;
-  -webkit-box-shadow: 0 0 5px #ff2c84;
-          box-shadow: 0 0 5px #ff2c84;
+  border: 5px solid #f80067;
+  -webkit-box-shadow: 0 0 5px #f80067;
+          box-shadow: 0 0 5px #f80067;
   border-radius: 10px;
   color: #cfcfcf;
   font-size: 2.5rem;
@@ -717,6 +717,7 @@ header {
   height: 100vh;
   padding: 100px 0;
   position: relative;
+  max-width: 100vw;
 }
 
 header::before {
@@ -827,7 +828,7 @@ form label {
   transition: border-color 150ms, -webkit-transform 150ms;
   transition: border-color 150ms, transform 150ms;
   transition: border-color 150ms, transform 150ms, -webkit-transform 150ms;
-  width: 60%;
+  width: 80%;
 }
 
 form label:hover, form label:focus-within {
@@ -840,9 +841,9 @@ form label:hover, form label:focus-within {
 }
 
 form label.selected {
-  border-color: #ff2c84;
-  -webkit-box-shadow: 0 0 5px #ff2c84;
-          box-shadow: 0 0 5px #ff2c84;
+  border-color: #f80067;
+  -webkit-box-shadow: 0 0 5px #f80067;
+          box-shadow: 0 0 5px #f80067;
 }
 
 form label input[type="radio"] {
@@ -888,14 +889,61 @@ form label input[type="radio"] {
   display: none;
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1200px) {
   html {
     font-size: 57%;
   }
-  header {
-    padding: 75px 0;
+}
+
+@media all and (max-width: 1100px) {
+  header,
+  main {
+    height: auto;
   }
   header .intro {
-    padding: 75px 50px;
+    width: 80%;
+  }
+  form .question,
+  button {
+    margin: 15px 0;
+    width: 48%;
+  }
+  label {
+    width: 48%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  header h1,
+  h1 i {
+    font-size: 9rem;
+  }
+  header h1,
+  header .intro {
+    width: 90%;
+  }
+  header .intro {
+    padding: 40px 30px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  header {
+    padding-top: 30px;
+  }
+  header h1,
+  header .intro {
+    width: 100%;
+  }
+  header h1,
+  header i {
+    font-size: 7rem;
+  }
+  header .intro {
+    padding: 20px;
+  }
+  form .question,
+  button {
+    width: 100%;
   }
 }

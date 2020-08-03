@@ -1,11 +1,73 @@
-@media all and (max-width: 1100px) {
+// MEDIA QUERIES
+
+// Largest Screens
+@media all and (max-width: 1200px) {
   html {
     font-size: 57%;
   }
+}
+
+// Medium-Large Screens
+@media all and (max-width: 1100px) {
+  header,
+  main {
+    height: auto;
+  }
+
+  header .intro {
+    width: 80%;
+  }
+
+  form .question,
+  button {
+    margin: 15px 0;
+    width: 48%;
+  }
+
+  label {
+    width: 48%;
+  }
+}
+
+// Medium Screens
+@media all and (max-width: 768px) {
+  header h1,
+  h1 i {
+    font-size: 9rem;
+  }
+
+  header h1,
+  header .intro {
+    width: 90%;
+  }
+
+  header .intro {
+    padding: 40px 30px;
+  }
+}
+
+// Small Screens
+@media all and (max-width: 500px) {
   header {
-    padding: 75px 0;
-    .intro {
-      padding: 75px 50px;
-    }
+    padding-top: 30px;
+  }
+
+  header h1,
+  header .intro {
+    width: 100%;
+  }
+
+  header h1,
+  header i {
+    font-size: 7rem;
+  }
+
+  header .intro {
+    padding: 20px;
+  }
+
+  form .question,
+  button {
+    width: 100%;
   }
 }
