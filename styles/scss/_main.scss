@@ -1,5 +1,6 @@
 // Quiz Section
 main {
+  padding-top: 160px;
   height: 100vh;
 }
 
@@ -55,14 +56,16 @@ form {
   box-shadow: 0 0 5px $accentColor;
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 30px;
   width: 100%;
   h2 {
     color: $secondaryColor;
     font-size: 4.5rem;
+    padding: 0 0 20px 0;
   }
   .imgWrapper {
-    width: 27%;
+    width: 30%;
+    height: auto;
     img {
       border: 4px solid $primaryColor;
       border-radius: 10px;
@@ -71,6 +74,9 @@ form {
   }
   .copyWrapper {
     width: 65%;
+    .instructions {
+      padding-top: 30px;
+    }
   }
 }
 

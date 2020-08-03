@@ -751,11 +751,12 @@ header .arrow {
   font-size: 8rem;
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  left: 48.5%;
   cursor: pointer;
 }
 
 main {
+  padding-top: 160px;
   height: 100vh;
 }
 
@@ -836,17 +837,19 @@ form label input[type="radio"] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 20px;
+  padding: 30px;
   width: 100%;
 }
 
 .recipeCard h2 {
   color: #da1337;
   font-size: 4.5rem;
+  padding: 0 0 20px 0;
 }
 
 .recipeCard .imgWrapper {
-  width: 27%;
+  width: 30%;
+  height: auto;
 }
 
 .recipeCard .imgWrapper img {
@@ -858,6 +861,10 @@ form label input[type="radio"] {
 
 .recipeCard .copyWrapper {
   width: 65%;
+}
+
+.recipeCard .copyWrapper .instructions {
+  padding-top: 30px;
 }
 
 .hide {
