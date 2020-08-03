@@ -302,10 +302,10 @@ body {
 }
 
 h1 {
-  color: #ff006a;
+  color: #ff2c84;
   font-family: "Comfortaa", cursive;
   font-size: 14rem;
-  text-shadow: 0 0 10px #ff006a;
+  text-shadow: 0 0 10px #ff2c84;
   margin: auto;
   width: 75%;
 }
@@ -343,7 +343,7 @@ form h2 {
 }
 
 .recipeCard h2 {
-  color: #ff006a;
+  color: #ff2c84;
 }
 
 body {
@@ -369,9 +369,9 @@ ul li {
 
 button {
   background: transparent;
-  border: 5px solid #ff006a;
-  -webkit-box-shadow: 0 0 5px #ff006a;
-          box-shadow: 0 0 5px #ff006a;
+  border: 5px solid #ff2c84;
+  -webkit-box-shadow: 0 0 5px #ff2c84;
+          box-shadow: 0 0 5px #ff2c84;
   border-radius: 10px;
   color: #cfcfcf;
   font-size: 2.5rem;
@@ -837,9 +837,9 @@ form label:hover, form label:focus-within {
 }
 
 form label.selected {
-  border-color: #ff006a;
-  -webkit-box-shadow: 0 0 5px #ff006a;
-          box-shadow: 0 0 5px #ff006a;
+  border-color: #ff2c84;
+  -webkit-box-shadow: 0 0 5px #ff2c84;
+          box-shadow: 0 0 5px #ff2c84;
 }
 
 form label input[type="radio"] {
@@ -867,10 +867,10 @@ form label input[type="radio"] {
 }
 
 .recipeCard .imgWrapper img {
-  border: 4px solid #7bfff8;
+  border: 5px solid #7bfff8;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 5px #7bfff8;
-          box-shadow: 0 0 5px #7bfff8;
+  -webkit-box-shadow: 0 0 7px #7bfff8;
+          box-shadow: 0 0 7px #7bfff8;
 }
 
 .recipeCard .copyWrapper {
