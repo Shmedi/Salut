@@ -5,10 +5,9 @@
 // Background & Button Scroll
 
 header {
-  display: flex;
   height: 100vh;
+  padding: 75px 0;
   position: relative;
-
   &::before {
     background: url(../assets/images/background.jpg) no-repeat;
     background-size: cover;
@@ -21,6 +20,23 @@ header {
     width: 100%;
   }
 
+  // Logo & Title
+  .logoContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+  }
+
+  .intro {
+    background: $darkestRgba;
+    border: 4px solid $primaryColor;
+    border-radius: 20px;
+    box-shadow: 0 0 5px $primaryColor;
+    margin: 50px auto;
+    padding: 75px;
+    width: 75%;
+  }
+
   .arrow {
     color: $arrowColor;
     font-size: 8rem;
@@ -29,12 +45,4 @@ header {
     left: 50%;
     cursor: pointer;
   }
-}
-
-// Logo & Title
-
-.logoContainer {
-  display: flex;
-  padding-top: 100px;
-  flex-flow: row wrap;
 }

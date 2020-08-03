@@ -5,16 +5,23 @@ html {
 body {
   color: $lightest;
   font-family: $primaryFont;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.4;
 }
 
 h1 {
   color: $secondaryColor;
-  font-size: 15rem;
+  font-size: 13rem;
   font-family: "Comfortaa", cursive;
   text-shadow: 0 0 10px $secondaryColor;
+  text-align: center;
+  width: 100%;
+  i {
+    color: $accentColor;
+    font-size: 11rem;
+    text-shadow: 0 0 10px $accentColor;
+  }
 }
 
 h2,
@@ -37,15 +44,4 @@ h3 {
   span {
     font-size: 1.8rem;
   }
-}
-
-.intro {
-  font-size: 2.4rem;
-  padding: 100px 0 50px 0;
-}
-
-.logoContainer i {
-  color: $accentColor;
-  font-size: 13rem;
-  text-shadow: 0 0 10px $accentColor;
 }

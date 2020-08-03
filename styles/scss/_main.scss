@@ -1,8 +1,7 @@
+// Quiz Section
 main {
   height: 100vh;
 }
-
-// Quiz Section
 
 form {
   display: flex;
@@ -41,10 +40,9 @@ form {
       border-color: $secondaryColor;
       box-shadow: 0 0 3px $secondaryColor;
     }
-  }
-
-  input[type="radio"] {
-    opacity: 0;
+    input[type="radio"] {
+      opacity: 0;
+    }
   }
 }
 
