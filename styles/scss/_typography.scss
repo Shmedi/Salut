@@ -12,28 +12,26 @@ body {
 
 h1 {
   color: $secondaryColor;
-  font-size: 13rem;
-  font-family: "Comfortaa", cursive;
+  font-family: $secondaryFont;
+  font-size: 14rem;
   text-shadow: 0 0 10px $secondaryColor;
-  text-align: center;
-  width: 100%;
+  margin: auto;
+  width: 75%;
   i {
     color: $accentColor;
-    font-size: 11rem;
-    text-shadow: 0 0 10px $accentColor;
+    font-size: 12rem;
+    text-shadow: 0 0 7px $accentColor;
   }
 }
 
-h2,
+.recipeCard h2,
 h3 {
   text-transform: uppercase;
 }
 
 h2 {
-  color: $secondaryColor;
   font-size: 3.5rem;
   padding: 25px 0;
-  text-align: center;
   width: 100%;
 }
 
@@ -44,4 +42,13 @@ h3 {
   span {
     font-size: 1.8rem;
   }
+}
+
+main h2 {
+  color: $lightest;
+  text-align: center;
+}
+
+.recipeCard h2 {
+  color: $secondaryColor;
 }

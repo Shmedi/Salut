@@ -294,7 +294,7 @@ html {
 }
 
 body {
-  color: #c5c5c5;
+  color: #cfcfcf;
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
@@ -302,30 +302,28 @@ body {
 }
 
 h1 {
-  color: #da1337;
-  font-size: 13rem;
+  color: #ff006a;
   font-family: "Comfortaa", cursive;
-  text-shadow: 0 0 10px #da1337;
-  text-align: center;
-  width: 100%;
+  font-size: 14rem;
+  text-shadow: 0 0 10px #ff006a;
+  margin: auto;
+  width: 75%;
 }
 
 h1 i {
   color: #edff00;
-  font-size: 11rem;
-  text-shadow: 0 0 10px #edff00;
+  font-size: 12rem;
+  text-shadow: 0 0 7px #edff00;
 }
 
-h2,
+.recipeCard h2,
 h3 {
   text-transform: uppercase;
 }
 
 h2 {
-  color: #da1337;
   font-size: 3.5rem;
   padding: 25px 0;
-  text-align: center;
   width: 100%;
 }
 
@@ -339,9 +337,18 @@ h3 span {
   font-size: 1.8rem;
 }
 
+main h2 {
+  color: #cfcfcf;
+  text-align: center;
+}
+
+.recipeCard h2 {
+  color: #ff006a;
+}
+
 body {
   background: #070b16;
-  color: #c5c5c5;
+  color: #cfcfcf;
 }
 
 .wrapper {
@@ -362,11 +369,11 @@ ul li {
 
 button {
   background: transparent;
-  border: 4px solid #da1337;
-  -webkit-box-shadow: 0 0 3px #da1337;
-          box-shadow: 0 0 3px #da1337;
+  border: 5px solid #ff006a;
+  -webkit-box-shadow: 0 0 5px #ff006a;
+          box-shadow: 0 0 5px #ff006a;
   border-radius: 10px;
-  color: #c5c5c5;
+  color: #cfcfcf;
   font-size: 2.5rem;
   margin: 35px auto;
   padding: 15px 0;
@@ -715,6 +722,7 @@ header {
 header::before {
   background: url(../assets/images/background.jpg) no-repeat;
   background-size: cover;
+  background-position: center;
   content: "";
   height: 100%;
   left: 0;
@@ -735,9 +743,13 @@ header .logoContainer {
   margin: 0 auto;
 }
 
+header .logoContainer .imgWrapper {
+  width: 25%;
+}
+
 header .intro {
   background: rgba(7, 11, 22, 0.8);
-  border: 4px solid #7bfff8;
+  border: 5px solid #7bfff8;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 5px #7bfff8;
           box-shadow: 0 0 5px #7bfff8;
@@ -747,15 +759,25 @@ header .intro {
 }
 
 header .arrow {
-  color: rgba(122, 255, 248, 0.635);
-  font-size: 8rem;
-  position: absolute;
+  color: #7bfff8;
   bottom: 20px;
+  font-size: 8rem;
   left: 50%;
+  position: absolute;
   cursor: pointer;
 }
 
 main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   height: 100vh;
 }
 
@@ -774,7 +796,7 @@ form .question {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 4px solid #7bfff8;
+  border: 5px solid #7bfff8;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 5px #7bfff8;
           box-shadow: 0 0 5px #7bfff8;
@@ -815,9 +837,9 @@ form label:hover, form label:focus-within {
 }
 
 form label.selected {
-  border-color: #da1337;
-  -webkit-box-shadow: 0 0 5px #da1337;
-          box-shadow: 0 0 5px #da1337;
+  border-color: #ff006a;
+  -webkit-box-shadow: 0 0 5px #ff006a;
+          box-shadow: 0 0 5px #ff006a;
 }
 
 form label input[type="radio"] {
@@ -826,7 +848,7 @@ form label input[type="radio"] {
 
 .recipeCard {
   margin: 0 auto;
-  border: 4px solid #edff00;
+  border: 5px solid #edff00;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 5px #edff00;
           box-shadow: 0 0 5px #edff00;
@@ -838,11 +860,6 @@ form label input[type="radio"] {
           justify-content: space-between;
   padding: 30px 20px;
   width: 100%;
-}
-
-.recipeCard h2 {
-  color: #da1337;
-  font-size: 4.5rem;
 }
 
 .recipeCard .imgWrapper {
@@ -862,4 +879,16 @@ form label input[type="radio"] {
 
 .hide {
   display: none;
+}
+
+@media all and (max-width: 1100px) {
+  html {
+    font-size: 57%;
+  }
+  header {
+    padding: 75px 0;
+  }
+  header .intro {
+    padding: 75px 50px;
+  }
 }

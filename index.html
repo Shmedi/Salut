@@ -19,7 +19,10 @@
     <!-- Header -->
     <header>
       <div class="wrapper logoContainer flicker-in-1">
-        <h1><i class="fas fa-cocktail"></i>salut.</h1>
+        <h1>
+          <i class="fas fa-cocktail" aria-label="salut cocktail logo"></i>
+          salut.
+        </h1>
         <p class="intro">
           Looking for your signature drink? Our bespoke bartending app helps you
           find your perfect drink match. A well curated list of cocktails has
@@ -117,24 +120,28 @@
         </form>
 
         <!-- Recipe card section -->
-        <section class="recipeCard hide">
-          <div class="imgWrapper">
-            <img class="drinkImg" src="" alt="" />
+        <section class="recipe">
+          <div class="recipeCard hide">
+            <div class="imgWrapper">
+              <img class="drinkImg" src="" alt="" />
+            </div>
+
+            <div class="copyWrapper">
+              <h2 class="drinkName"></h2>
+              <ul>
+                <li class="li1"></li>
+                <li class="li2"></li>
+                <li class="li3"></li>
+                <li class="li4 hide"></li>
+              </ul>
+              <p class="instructions"></p>
+            </div>
           </div>
 
-          <div class="copyWrapper">
-            <h2 class="drinkName"></h2>
-            <ul>
-              <li class="li1"></li>
-              <li class="li2"></li>
-              <li class="li3"></li>
-              <li class="li4 hide"></li>
-            </ul>
-            <p class="instructions"></p>
-          </div>
+          <button type="button" class="reset hide">
+            Make me another drink
+          </button>
         </section>
-
-        <button type="button" class="reset hide">Make me another drink</button>
       </main>
     </div>
 

@@ -11,6 +11,7 @@ header {
   &::before {
     background: url(../assets/images/background.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
     content: "";
     height: 100%;
     left: 0;
@@ -25,11 +26,14 @@ header {
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
+    .imgWrapper {
+      width: 25%;
+    }
   }
 
   .intro {
     background: $darkestRgba;
-    border: 4px solid $primaryColor;
+    border: 5px solid $primaryColor;
     border-radius: 20px;
     box-shadow: 0 0 5px $primaryColor;
     margin: 50px auto;
@@ -38,11 +42,12 @@ header {
   }
 
   .arrow {
-    color: $arrowColor;
-    font-size: 8rem;
-    position: absolute;
+    color: $primaryColor;
     bottom: 20px;
+    font-size: 8rem;
     left: 50%;
+    position: absolute;
+
     cursor: pointer;
   }
 }
