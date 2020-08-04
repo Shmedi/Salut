@@ -43,7 +43,7 @@ salut.handleRadio = function () {
     $(this).parents(".question").find("label").removeClass("selected");
     $(this).parents("label").addClass("selected");
 
-    // Error handle for beverage selection before drink style
+    //Error handle for beverage selection before drink style
     // Select a drink based on the user's choice
     switch (this.value) {
       case "cocktail":
@@ -119,7 +119,7 @@ salut.showCard = () => {
   setTimeout(function () {
     $(".recipeCard").removeClass("hide");
     $(".reset").removeClass("hide");
-  }, 500);
+  }, 800);
 };
 
 // Hides the form on submit
