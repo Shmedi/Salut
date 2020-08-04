@@ -382,7 +382,7 @@ main button {
   transition: -webkit-transform 150ms;
   transition: transform 150ms;
   transition: transform 150ms, -webkit-transform 150ms;
-  width: 30%;
+  width: 100%;
 }
 
 main button:hover {
@@ -392,6 +392,11 @@ main button:hover {
   border-color: #edff00;
   -webkit-box-shadow: 0 0 3px #edff00;
           box-shadow: 0 0 3px #edff00;
+}
+
+.btnWrapper {
+  width: 32.33%;
+  margin: 0 auto;
 }
 
 /* ----------------------------------------------
@@ -929,12 +934,23 @@ form label input[type="radio"] {
     padding: 80px 0;
   }
   form .question,
-  button {
+  .btnWrapper {
     margin: 15px 0;
     width: 48%;
   }
   label {
     width: 48%;
+  }
+  main button {
+    width: 75%;
+  }
+  .btnWrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .recipeCard .copyWrapper {
     width: 100%;
@@ -955,6 +971,9 @@ form label input[type="radio"] {
   header .intro {
     padding: 40px 30px;
   }
+  main button {
+    width: 90%;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -974,6 +993,12 @@ form label input[type="radio"] {
   }
   form .question,
   button {
+    width: 100%;
+  }
+  main button {
+    width: 100%;
+  }
+  .btnWrapper {
     width: 100%;
   }
 }

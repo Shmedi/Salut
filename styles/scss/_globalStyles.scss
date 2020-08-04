@@ -30,11 +30,16 @@ main button {
   padding: 15px 0;
   text-transform: uppercase;
   transition: transform 150ms;
-  width: 30%;
+  width: 100%;
   &:hover {
     cursor: pointer;
     transform: scale(1.03);
     border-color: $accentColor;
     box-shadow: 0 0 3px $accentColor;
   }
+}
+
+.btnWrapper {
+  width: 32.33%;
+  margin: 0 auto;
 }
