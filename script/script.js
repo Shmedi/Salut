@@ -26,7 +26,7 @@ salut.getDrink = function (drinkId) {
   });
 };
 
-// Add event listener to the arrow button
+// Add event listener to the arrow button ---
 salut.arrowClick = function () {
   // When the user clicks, bring them to the form and hide arrow
   $(".arrow").on("click", function () {
@@ -71,6 +71,7 @@ salut.clickRadio = () => {
   });
 };
 
+<<<<<<< HEAD
 // Event listener for radio key "enter" to select radio input
 salut.keyRadio = function () {
   $("input[type=radio]").keypress(function (e) {
@@ -88,6 +89,9 @@ salut.handleRadio = function () {
 };
 
 // Check user options and find the corresponding drink
+=======
+// Check user options and find the corresponding drink ---
+>>>>>>> 1d48ca4b38dc29484d53ee6fa1a132973fdca29d
 salut.checkOptions = (options) => {
   const beverage = options.beverage;
   const type = options.type;
@@ -128,19 +132,20 @@ salut.checkOptions = (options) => {
   }
 };
 
+// Selects a random drink ID from the 'multiple' arrays ---
 salut.randomDrink = function (array) {
   let randomNumber = Math.floor(Math.random() * 3);
   salut.drinkId = array[randomNumber];
 };
 
-// Shows the recipe Card
+// Shows the recipe Card ---
 salut.showCard = () => {
   setTimeout(function () {
     $(".recipe").removeClass("hide");
   }, 800);
 };
 
-// Hides the form, arrow and intro on submit
+// Hides the form, arrow and intro on submit ---
 salut.hideForm = () => {
   $("form").addClass("hide");
   $(".intro").addClass("hide");
@@ -150,47 +155,47 @@ salut.hideForm = () => {
 
 // Display the API results to the recipe card ---
 salut.displayRecipe = function (result) {
-  // drink object api variable
+  // Drink object api variable
   const drinkObj = result.drinks[0];
 
-  // drink name variable
+  // Drink name variable
   const drink = drinkObj.strDrink;
 
-  // drink ingredient variables
+  // Drink ingredient variables
   const ingredient1 = drinkObj.strIngredient1;
   const ingredient2 = drinkObj.strIngredient2;
   const ingredient3 = drinkObj.strIngredient3;
   const ingredient4 = drinkObj.strIngredient4;
 
-  // ingredient measurement variables
+  // Ingredient measurement variables
   const measure1 = drinkObj.strMeasure1;
   const measure2 = drinkObj.strMeasure2;
   const measure3 = drinkObj.strMeasure3;
   const measure4 = drinkObj.strMeasure4;
 
-  // recipe instruction variable
+  // Recipe instruction variable
   const instructions = drinkObj.strInstructions;
 
-  // drink image variable
+  // Drink image variable
   const drinkImg = drinkObj.strDrinkThumb;
 
-  // displays fourth list item only if fourth ingredient is present
+  // Displays fourth list item only if fourth ingredient is present
   const checkIngredient = (ingredient4) => {
     if (ingredient4 !== null) {
       $(".li4").removeClass("hide");
     }
   };
 
-  // appends heading
+  // Appends heading
   $(".drinkName").text(drink);
 
-  // appends ingredient list
+  // Appends ingredient list
   $(".li1").text(`${measure1} ${ingredient1}`);
   $(".li2").text(`${measure2} ${ingredient2}`);
   $(".li3").text(`${measure3} ${ingredient3}`);
   $(".li4").text(`${measure4} ${ingredient4}`);
 
-  // appends instructions
+  // Appends instructions
   $(".instructions").text(instructions);
   $(".drinkImg").attr("src", drinkImg).attr("alt", drink);
   checkIngredient(ingredient4);
@@ -207,7 +212,7 @@ salut.onSubmit = function () {
   });
 };
 
-// Reset the page
+// Reset the page ---
 salut.onReset = function () {
   $(".reset").on("click", function () {
     location.reload();
