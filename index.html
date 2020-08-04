@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
+    <!-- Favicons -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/favicons/apple-touch-icon.png"
+      href="./assets/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/favicons/favicon-32x32.png"
+      href="./assets/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/favicons/favicon-16x16.png"
+      href="./assets/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;500&display=swap"
@@ -35,7 +35,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- Title -->
-    <title>Salut</title>
+    <title>salut.</title>
   </head>
 
   <body>
@@ -58,8 +58,11 @@
           cocktail recipe that's perfect for you.
         </p>
       </div>
-      <!-- Scroll Arrow -->
-      <i class="arrow fa fa-angle-double-down bounce-top"></i>
+      <i
+        class="arrow fa fa-angle-double-down bounce-top"
+        aria-hidden="true"
+        tabindex="0"
+      ></i>
     </header>
 
     <!-- Main -->
@@ -146,7 +149,9 @@
           </div>
 
           <!-- Submit Button -->
-          <button class="submit" type="submit">Pour me a drink</button>
+          <div class="btnWrapper">
+            <button class="submit" type="submit">Pour me a drink</button>
+          </div>
         </form>
 
         <!-- Recipe card section -->
@@ -174,9 +179,11 @@
           </div>
 
           <!-- Reset Button -->
-          <button type="button" class="reset">
-            Make me another drink
-          </button>
+          <div class="btnWrapper">
+            <button type="button" class="reset">
+              Make me another drink
+            </button>
+          </div>
         </section>
       </div>
     </main>

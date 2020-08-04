@@ -23,13 +23,26 @@
   }
 
   form .question,
-  button {
+  .btnWrapper {
     margin: 15px 0;
     width: 48%;
   }
 
   label {
     width: 48%;
+  }
+
+  main button {
+    width: 75%;
+  }
+
+  .reset {
+    margin: 20px 0;
+  }
+
+  .btnWrapper {
+    align-items: center;
+    display: flex;
   }
 
   .recipeCard {
@@ -56,6 +69,10 @@
   header .intro {
     padding: 40px 30px;
   }
+
+  main button {
+    width: 90%;
+  }
 }
 
 // Small Screens
@@ -81,6 +98,14 @@
 
   form .question,
   button {
+    width: 100%;
+  }
+
+  main button {
+    width: 100%;
+  }
+
+  .btnWrapper {
     width: 100%;
   }
 }
