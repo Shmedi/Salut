@@ -367,7 +367,7 @@ ul li {
   list-style-type: none;
 }
 
-button {
+main button {
   background: transparent;
   border: 5px solid #f80067;
   -webkit-box-shadow: 0 0 5px #f80067;
@@ -385,7 +385,7 @@ button {
   width: 30%;
 }
 
-button:hover {
+main button:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
