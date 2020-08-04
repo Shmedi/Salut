@@ -71,7 +71,6 @@ salut.clickRadio = () => {
   });
 };
 
-<<<<<<< HEAD
 // Event listener for radio key "enter" to select radio input
 salut.keyRadio = function () {
   $("input[type=radio]").keypress(function (e) {
@@ -89,9 +88,6 @@ salut.handleRadio = function () {
 };
 
 // Check user options and find the corresponding drink
-=======
-// Check user options and find the corresponding drink ---
->>>>>>> 1d48ca4b38dc29484d53ee6fa1a132973fdca29d
 salut.checkOptions = (options) => {
   const beverage = options.beverage;
   const type = options.type;
