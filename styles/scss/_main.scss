@@ -1,17 +1,22 @@
 // Quiz Section
 main {
-  padding-top: 160px;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   height: 100vh;
+  position: relative;
+  width: 100vw;
 }
 
 form {
+  background: $darkestRgba;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   .question {
     display: flex;
-    border: 4px solid $primaryColor;
+    border: 5px solid $primaryColor;
     border-radius: 20px;
     box-shadow: 0 0 5px $primaryColor;
     flex-flow: row wrap;
@@ -29,7 +34,7 @@ form {
     padding: 10px 0;
     text-align: center;
     transition: border-color 150ms, transform 150ms;
-    width: 60%;
+    width: 80%;
     &:hover,
     &:focus-within {
       cursor: pointer;
@@ -51,33 +56,34 @@ form {
 
 .recipeCard {
   margin: 0 auto;
-  border: 4px solid $accentColor;
+  border: 5px solid $accentColor;
   border-radius: 20px;
   box-shadow: 0 0 5px $accentColor;
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between;
   padding: 30px;
   width: 100%;
-  h2 {
-    color: $secondaryColor;
-    font-size: 4.5rem;
-    padding: 0 0 20px 0;
-  }
   .imgWrapper {
-    width: 30%;
+    width: 335px;
     height: auto;
     img {
-      border: 4px solid $primaryColor;
+      border: 5px solid $primaryColor;
       border-radius: 10px;
-      box-shadow: 0 0 5px $primaryColor;
+      box-shadow: 0 0 7px $primaryColor;
     }
   }
   .copyWrapper {
     width: 65%;
+    padding-left: 30px;
     .instructions {
       padding-top: 30px;
     }
   }
+}
+
+.reset {
+  padding: 15px 20px;
 }
 
 // Changes element display

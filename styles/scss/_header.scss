@@ -3,14 +3,17 @@
 @import "animation";
 
 // Background & Button Scroll
-
 header {
   height: 100vh;
   padding: 100px 0;
   position: relative;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 100vw;
   &::before {
     background: url(../assets/images/background.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
     content: "";
     height: 100%;
     left: 0;
@@ -24,25 +27,32 @@ header {
   .logoContainer {
     display: flex;
     flex-flow: row wrap;
+    text-align: center;
     margin: 0 auto;
+    .imgWrapper {
+      width: 25%;
+    }
   }
 
   .intro {
     background: $darkestRgba;
-    border: 4px solid $primaryColor;
+    border: 5px solid $primaryColor;
     border-radius: 20px;
     box-shadow: 0 0 5px $primaryColor;
-    margin: 50px auto;
+    text-align: center;
+    margin: 20px auto;
     padding: 75px;
     width: 75%;
   }
 
   .arrow {
-    color: $arrowColor;
-    font-size: 8rem;
-    position: absolute;
+    color: $primaryColor;
     bottom: 20px;
-    left: 48.5%;
+    font-size: 5rem;
+    justify-self: center;
+
+    position: absolute;
+
     cursor: pointer;
   }
 }

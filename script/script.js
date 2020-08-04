@@ -26,9 +26,22 @@ salut.getDrink = function (drinkId) {
   });
 };
 
+// Add event listener to the arrow button
+salut.arrowClick = function () {
+  // When the user clicks, bring them to the form
+  $(".arrow").on("click", function () {
+    $("html, body").animate({
+      scrollTop: $("main").offset().top,
+    });
+  });
+};
+
 // Add event listeners to the radio buttons ---
 salut.handleRadio = function () {
   $("input[type=radio]").on("click", function () {
+    // Adds selected styles to user selected radio options
+    $(this).parents("label").toggleClass("selected");
+
     // Error handle for beverage selection before drink style
     // Select a drink based on the user's choice
     switch (this.value) {
@@ -71,25 +84,25 @@ salut.checkOptions = (options) => {
       // Strawberry Lemonade
       salut.drinkId = "13036";
     } else if (beverage === "mocktail" && type === "fancy") {
-      // Just a moonmint
-      salut.drinkId = "12688";
+      // Lassi Khara
+      salut.drinkId = "12692";
     }
   } else if (choice === "multiple") {
     if (beverage === "cocktail" && type === "classic") {
-      // Moscow Mule / Greyhound / Sidecar
-      const classicCocktails = ["11009", "17252", "12198"];
+      // Moscow Mule / Spritz / Sidecar
+      const classicCocktails = ["11009", "17215", "12198"];
       salut.randomDrink(classicCocktails);
     } else if (beverage === "cocktail" && type === "fancy") {
       // Gagliardio / Valencia / Blackthorn
       const fancyCocktails = ["12758", "12434", "11106"];
       salut.randomDrink(fancyCocktails);
     } else if (beverage === "mocktail" && type === "classic") {
-      // Limade / Ipamena / Afterglow
-      const classicMocktails = ["12704", "17176", "12560"];
+      // Banana & Strawberry / Iced Coffee / Afterglow
+      const classicMocktails = ["12658", "12770", "12560"];
       salut.randomDrink(classicMocktails);
     } else if (beverage === "mocktail" && type === "fancy") {
-      // Sweet Bananas / Egg Cream / Psych Vitamin Light
-      const fancyMocktails = ["12742", "12668", "15092"];
+      // Apello / Egg Cream / Ipamena
+      const fancyMocktails = ["15106", "12668", "17176"];
       salut.randomDrink(fancyMocktails);
     }
   }
@@ -128,7 +141,7 @@ salut.displayRecipe = function (result) {
   const ingredient3 = drinkObj.strIngredient3;
   const ingredient4 = drinkObj.strIngredient4;
 
-  // ingredient measurement varibales
+  // ingredient measurement variables
   const measure1 = drinkObj.strMeasure1;
   const measure2 = drinkObj.strMeasure2;
   const measure3 = drinkObj.strMeasure3;
@@ -182,6 +195,7 @@ salut.onReset = function () {
 
 // Initializes salut application ---
 salut.init = function () {
+  salut.arrowClick();
   salut.onSubmit();
   salut.handleRadio();
   salut.onReset();
