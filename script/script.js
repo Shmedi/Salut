@@ -28,8 +28,11 @@ salut.getDrink = function (drinkId) {
 
 // Add event listener to the arrow button
 salut.arrowClick = function () {
-  // When the user clicks, bring them to the form
+  // When the user clicks, bring them to the form and hide arrow
   $(".arrow").on("click", function () {
+    setTimeout(() => {
+      $(".arrow").addClass("hide");
+    }, 300);
     $("html, body").animate({
       scrollTop: $("main").offset().top,
     });
@@ -117,8 +120,7 @@ salut.randomDrink = function (array) {
 // Shows the recipe Card
 salut.showCard = () => {
   setTimeout(function () {
-    $(".recipeCard").removeClass("hide");
-    $(".reset").removeClass("hide");
+    $(".recipe").removeClass("hide");
   }, 800);
 };
 
