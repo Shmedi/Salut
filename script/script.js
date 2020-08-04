@@ -40,7 +40,8 @@ salut.arrowClick = function () {
 salut.handleRadio = function () {
   $("input[type=radio]").on("click", function () {
     // Adds selected styles to user selected radio options
-    $(this).parents("label").toggleClass("selected");
+    $(this).parents("label").removeClass("selected");
+    $(this).parents("label").addClass("selected");
 
     // Error handle for beverage selection before drink style
     // Select a drink based on the user's choice
