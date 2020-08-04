@@ -39,8 +39,8 @@ salut.arrowClick = function () {
   });
 };
 
-// Add event listeners to the radio buttons ---
-salut.handleRadio = function () {
+// Event listener for radio click event ---
+salut.clickRadio = () => {
   $("input[type=radio]").on("click", function () {
     // Adds selected styles to user selected radio options
     $(this).parents(".question").find("label").removeClass("selected");
@@ -69,6 +69,22 @@ salut.handleRadio = function () {
         break;
     }
   });
+};
+
+// Event listener for radio key "enter" to select radio input
+salut.keyRadio = function () {
+  $("input[type=radio]").keypress(function (e) {
+    if (e.keyCode === 13) {
+      event.preventDefault();
+      $(this).trigger("click");
+    }
+  });
+};
+
+// Add event listeners to the radio buttons ---
+salut.handleRadio = function () {
+  salut.clickRadio();
+  salut.keyRadio();
 };
 
 // Check user options and find the corresponding drink
