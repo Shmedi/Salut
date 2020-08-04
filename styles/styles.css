@@ -907,6 +907,10 @@ form label input[type="radio"] {
   transition: opacity 1s;
 }
 
+.heightAuto {
+  height: auto;
+}
+
 @media all and (max-width: 1200px) {
   html {
     font-size: 57%;

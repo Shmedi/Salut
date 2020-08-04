@@ -124,10 +124,12 @@ salut.showCard = () => {
   }, 800);
 };
 
-// Hides the form on submit
+// Hides the form, arrow and intro on submit
 salut.hideForm = () => {
   $("form").addClass("hide");
   $(".intro").addClass("hide");
+  $(".arrow").addClass("hide");
+  $("header").addClass("heightAuto");
 };
 
 // Display the API results to the recipe card ---
