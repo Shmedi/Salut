@@ -935,7 +935,7 @@ form label input[type="radio"] {
   }
   form .question,
   .btnWrapper {
-    margin: 15px 0;
+    margin: 15px auto;
     width: 48%;
   }
   label {
