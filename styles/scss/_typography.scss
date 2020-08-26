@@ -24,6 +24,14 @@ h1 {
   }
 }
 
+.intro {
+  text-align: center;
+  font-family: $secondaryFont;
+  color: $primaryColor;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 .recipeCard h2,
 h3 {
   text-transform: uppercase;

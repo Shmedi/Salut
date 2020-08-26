@@ -316,6 +316,14 @@ h1 i {
   text-shadow: 0 0 7px #edff00;
 }
 
+.intro {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  color: #7bfff8;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 .recipeCard h2,
 h3 {
   text-transform: uppercase;
@@ -599,112 +607,33 @@ main button:hover {
   }
 }
 
-/* ----------------------------------------------
- * Animation Bounce-Top
- * ---------------------------------------------- */
-@-webkit-keyframes bounce-top {
+@-webkit-keyframes bounceTop {
   0% {
-    -webkit-transform: translateY(-45px);
-    transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-    transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%,
-  55%,
-  75%,
-  87% {
+  50% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 }
 
-@keyframes bounce-top {
+@keyframes bounceTop {
   0% {
-    -webkit-transform: translateY(-45px);
-    transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-    transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%,
-  55%,
-  75%,
-  87% {
+  50% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 }
 
@@ -713,9 +642,9 @@ main button:hover {
           animation: flicker-in-1 2s ease-in-out both;
 }
 
-.bounce-top {
-  -webkit-animation: bounce-top 2s ease-in-out infinite both;
-  animation: bounce-top 2s ease-in-out infinite both;
+.bounceTop {
+  -webkit-animation: bounceTop 2s ease-in-out infinite both;
+          animation: bounceTop 2s ease-in-out infinite both;
 }
 
 header {
@@ -759,19 +688,11 @@ header .logoContainer .imgWrapper {
 }
 
 header .intro {
-  background: rgba(7, 11, 22, 0.8);
-  border: 5px solid #7bfff8;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 5px #7bfff8;
-          box-shadow: 0 0 5px #7bfff8;
-  text-align: center;
-  margin: 20px auto;
-  padding: 75px;
-  width: 75%;
+  margin: 0 auto 80px;
 }
 
 header .arrow {
-  color: #7bfff8;
+  color: #edff00;
   bottom: 20px;
   font-size: 5rem;
   -ms-grid-column-align: center;
@@ -967,12 +888,8 @@ form label input[type="radio"] {
   h1 i {
     font-size: 9rem;
   }
-  header h1,
   header .intro {
-    width: 90%;
-  }
-  header .intro {
-    padding: 40px 30px;
+    font-size: 2.8rem;
   }
   main button {
     width: 90%;
@@ -988,16 +905,11 @@ form label input[type="radio"] {
     padding: 30px 0;
   }
   header h1,
-  header .intro {
-    width: 100%;
-  }
-  header h1,
   header i {
     font-size: 7rem;
   }
   header .intro {
-    padding: 20px;
-    margin-bottom: 100px;
+    font-size: 2rem;
   }
   main button {
     width: 100%;

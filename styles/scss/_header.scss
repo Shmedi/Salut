@@ -35,18 +35,11 @@ header {
   }
 
   .intro {
-    background: $darkestRgba;
-    border: 5px solid $primaryColor;
-    border-radius: 20px;
-    box-shadow: 0 0 5px $primaryColor;
-    text-align: center;
-    margin: 20px auto;
-    padding: 75px;
-    width: 75%;
+    margin: 0 auto 80px;
   }
 
   .arrow {
-    color: $primaryColor;
+    color: $accentColor;
     bottom: 20px;
     font-size: 5rem;
     justify-self: center;
