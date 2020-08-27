@@ -25,17 +25,17 @@ header {
 
   // Logo & Title
   .logoContainer {
+    align-self: center;
     display: flex;
     flex-flow: row wrap;
     text-align: center;
-    margin: 0 auto;
     .imgWrapper {
       width: 25%;
     }
   }
 
   .intro {
-    margin: 0 auto 80px;
+    margin: 0 auto;
   }
 
   .arrow {

@@ -672,6 +672,8 @@ header::before {
 }
 
 header .logoContainer {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,7 +682,6 @@ header .logoContainer {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   text-align: center;
-  margin: 0 auto;
 }
 
 header .logoContainer .imgWrapper {
@@ -688,7 +689,7 @@ header .logoContainer .imgWrapper {
 }
 
 header .intro {
-  margin: 0 auto 80px;
+  margin: 0 auto;
 }
 
 header .arrow {
@@ -844,7 +845,6 @@ form label input[type="radio"] {
 }
 
 @media all and (max-width: 1141px) {
-  header,
   main {
     height: auto;
   }
