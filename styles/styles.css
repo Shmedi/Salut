@@ -306,7 +306,7 @@ h1 {
   font-family: "Comfortaa", cursive;
   font-size: 14rem;
   text-shadow: 0 0 10px #f80067;
-  margin: auto;
+  margin: 0 auto;
   width: 75%;
 }
 
@@ -314,6 +314,7 @@ h1 i {
   color: #edff00;
   font-size: 12rem;
   text-shadow: 0 0 7px #edff00;
+  margin-right: -30px;
 }
 
 .intro {
@@ -674,6 +675,7 @@ header::before {
 header .logoContainer {
   -ms-flex-item-align: center;
       align-self: center;
+  margin-top: -100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,9 +850,6 @@ form label input[type="radio"] {
   main {
     height: auto;
   }
-  header .intro {
-    width: 80%;
-  }
   main {
     padding: 80px 0;
   }
@@ -887,6 +886,9 @@ form label input[type="radio"] {
   header h1,
   h1 i {
     font-size: 9rem;
+  }
+  h1 i {
+    margin-right: -10px;
   }
   header .intro {
     font-size: 2.8rem;

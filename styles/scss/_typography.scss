@@ -15,12 +15,13 @@ h1 {
   font-family: $secondaryFont;
   font-size: 14rem;
   text-shadow: 0 0 10px $secondaryColor;
-  margin: auto;
+  margin: 0 auto;
   width: 75%;
   i {
     color: $accentColor;
     font-size: 12rem;
     text-shadow: 0 0 7px $accentColor;
+    margin-right: -30px;
   }
 }
 

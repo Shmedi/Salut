@@ -13,10 +13,6 @@
     height: auto;
   }
 
-  header .intro {
-    width: 80%;
-  }
-
   main {
     padding: 80px 0;
   }
@@ -58,6 +54,10 @@
   header h1,
   h1 i {
     font-size: 9rem;
+  }
+
+  h1 i {
+    margin-right: -10px;
   }
 
   header .intro {
